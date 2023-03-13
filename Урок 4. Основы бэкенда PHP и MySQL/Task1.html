@@ -1,0 +1,50 @@
+<?php
+// Define an array of work experience data
+$work_experience = array(
+  array(
+    'company' => 'ABC Inc.',
+    'position' => 'Software Engineer',
+    'start_date' => '2018-06-01',
+    'end_date' => '2020-12-31',
+    'description' => 'Developed web applications using PHP and MySQL.'
+  ),
+  array(
+    'company' => 'XYZ Corp.',
+    'position' => 'Senior Software Engineer',
+    'start_date' => '2021-01-01',
+    'end_date' => null,
+    'description' => 'Leading a team of developers to build enterprise applications using Node.js and MongoDB.'
+  ),
+    array(
+    'company' => 'XYZ Corp.',
+    'position' => 'Senior Software Engineer',
+    'start_date' => '2021-01-01',
+    'end_date' => null,
+    'description' => 'Leading a team of developers to build enterprise applications using Node.js and MongoDB.'
+  )
+);
+
+// Output the work experience data in an HTML template
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div class="work-experience">
+  <h2>Work Experience</h2>
+  <?php foreach ($work_experience as $experience) { ?>
+    <div class="experience">
+      <h3><?php echo $experience['position']; ?> at <?php echo $experience['company']; ?></h3>
+      <p><?php echo $experience['start_date']; ?> - <?php echo $experience['end_date'] ?? 'Present'; ?></p>
+      <p><?php echo $experience['description']; ?></p>
+    </div>
+  <?php } ?>
+</div>
+</body>
+</html>
